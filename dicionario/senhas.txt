@@ -1,5 +1,6 @@
+# colocar a lista de senhas aqui
 12
 1234
 123
 123456
-adm2eco@
+
