@@ -17,7 +17,7 @@ if len( sys.argv ) != 1:
 			conexao.setHost( sys.argv[2] )
 			conexao.setPorta( int( sys.argv[3] ) )
 		else:
-			bruteforce.modoUsar()
+			bruteforce.mostrar_sobre()
 
 		usuarios = open( 'dicionario/usuarios.txt' )
 		for usuario in usuarios:
@@ -28,12 +28,15 @@ if len( sys.argv ) != 1:
 					print "\033[32mEncontrou! Usuario: " +  usuario.rstrip() + " / Senha: " + senha.rstrip() + "\033[0;0m"   
 
 	elif sys.argv[1] == '--help':
-		bruteforce.modoUsar()
+		bruteforce.modo_usar()
 		sys.exit()
 
 		# Caso o argumento seja para help:
 	elif sys.argv[1] == '--about':
-		bruteforce.sobreSN()
+		bruteforce.mostrar_sobre()
+		sys.exit()
+
+	elif sys.argv[1] == '--check_version':
 		sys.exit()
 
 else:
